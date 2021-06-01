@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#410363" />
+    <title>Family IPTV</title>
+    <meta name="author" content="Sedra Technology">
+
+
+    <!-- FAVICON FILES -->
+    <link href="ico/favicon.png" rel="shortcut icon">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/lineicons.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="content-section" data-background="images/section-pattern01.png">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="membership">
+                            <h6>Login to Your Account</h6>
+                            <p></p>
+                                <div class="form-group">
+                                    <select id="server" onchange="checkServer()">
+                                        <option>Choose Server..</option>
+                                        <option value="http://cobraa.in:8000">Cobra</option>
+                                        <option value="http://doom2-iptv.net:8080">Doom</option>
+                                        <option value="http://dh-iptv.com:8080">DH</option>
+                                        <option value="http://pablotv.us:2052">Pablo</option>
+                                        <option value="http://istars.pro:80">Istar</option>
+                                        <option value="http://falconiptv.pro:80">Falcon</option>
+                                        <option value="http://caspertv.tk:80">Casper</option>
+                                        <option value="http://vvc.to:80">VVC</option>
+                                    </select>
+                                </div>
+                                <!-- end form-group -->
+                                <div class="form-group">
+                                    <input id="username" type="text" placeholder="Username">
+                                </div>
+                                <!-- end form-group -->
+                                <div class="form-group">
+                                    <input id="password" type="password" placeholder="Password">
+                                </div>
+                                <!-- end form-group -->
+                                <div class="form-group">
+                                    <input type="submit" onclick="login()" value="LOGIN">
+                                </div>
+                                <!-- end form-group -->
+                        </div>
+                        <!-- end membership -->
+                    </div>
+                    <!-- end col-7 -->
+                    <div class="col-lg-5">
+                        <figure class="side-image">
+                            <img src="images/homeLogo.png" alt="Image">
+                        </figure>
+                        <!-- end side-image -->
+                    </div>
+                    <!-- end col-5 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end content-section -->
+        <footer class="footer">
+            <div class="bottom-bar">
+                <div class="container"> <span>© 2021 Family IPTV</span> <span>Developed By <a href="http://sedrait.sa/" target="_blank">Sedra Technology</a></span> </div>
+                <!-- end container -->
+            </div>
+            <!-- end bottom-bar -->
+        </footer>
+        <!-- end footer -->
+    </main>
+
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/fancybox.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+
+        var server;
+        var checkServer = function(){
+            server = document.getElementById('server').value;
+
+        }
+        var login = function (){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            let credintials = {
+                    username: username,
+                    password: password
+            };
+            
+            $.ajax({
+                url: server + "/player_api.php",
+                dataType: 'text',
+                type: "post",
+                contentType: 'application/x-www-form-urlencoded',
+                data: credintials,
+                dataType: 'json',
+                success: function(data) {
+
+                    if(data['server_info']){
+
+                        sessionStorage.setItem("username", username)
+                        sessionStorage.setItem("password", password)
+                        sessionStorage.setItem("server", server)
+                        window.location = "main.html";
+
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+

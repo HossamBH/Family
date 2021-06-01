@@ -1,0 +1,496 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#410363" />
+    <title>Family IPTV</title>
+    <meta name="author" content="Sedra Technology">
+
+
+    <!-- FAVICON FILES -->
+    <link href="ico/favicon.png" rel="shortcut icon">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/lineicons.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="getData();">
+    <nav class="mobile-menu">
+        <div class="inner">
+            <!-- end button-account -->
+            <div class="site-menu">
+                <ul>
+                    <li><a href="main.html">HOME</a></li>
+                    <li><a href="live-tv.html">LIVE TV</a></li>
+                    <li><a href="movies.html">MOVIES</a></li>
+                    <li><a href="series.html">SERIES</a></li>
+                </ul>
+            </div>
+            <!-- end site-menu -->
+        </div>
+        <!-- end inner -->
+    </nav>
+    <!-- end mobile-menu -->
+    <nav class="navbar">
+        <div class="logo"> <a href="main.html"> <img src="images/logo.png" alt="Image"> </a> </div>
+        <!-- end logo -->
+        <div class="site-menu">
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="live-tv.html">LIVE TV</a></li>
+                <li><a href="movies.html">MOVIES</a></li>
+                <li><a href="series.html">SERIES</a></li>
+            </ul>
+        </div>
+        <!-- end site-menu -->
+        <div class="user-menu">
+        </div>
+        <!-- end user-menu -->
+        <div class="hamburger-menu">
+            <button class="hamburger">
+                <svg width="45" height="45" viewBox="0 0 100 100">
+                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+        <!-- end hamburger-menu -->
+    </nav>
+    <!-- end navbar -->
+    <header class="slider">
+        <div class="main-slider">
+            <div class="swiper-wrapper">
+
+                <!-- recomended -->
+                <div class="swiper-slide">
+                    <div class="slide-inner" data-background="images/slide03.png">
+                        <div class="container" data-swiper-parallax="200">
+                            <h6 class="tagline">RECOMENDED</h6>
+                            <h2 class="name">Aladdin</h2>
+                            <ul class="features">
+                                <li>
+                                    <div class="rate">
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                    </div>
+                                    <!-- end rate -->
+                                </li>
+                                <li>
+                                    <div class="year">2019-05-22</div>
+                                </li>
+                                <li>
+                                    <div class="tags">Enjoy with Family IPTV</div>
+                                </li>
+                            </ul>
+                            <p class="description">
+                                A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.
+                            </p>
+                            <a href="moviesPlay.html?47132" class="play-btn">PLAY NOW</a>
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end slide-inner -->
+                </div>
+                <!-- end swiper-slide -->
+
+                <div class="swiper-slide">
+                    <div class="slide-inner" data-background="images/slide01.png">
+                        <div class="container" data-swiper-parallax="200">
+                            <h6 class="tagline">RECOMENDED</h6>
+                            <h2 class="name">Zack-Snyders-Justice-League-2021</h2>
+                            <ul class="features">
+                                <li>
+                                    <div class="rate">
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                    </div>
+                                    <!-- end rate -->
+                                </li>
+                                <li>
+                                    <div class="year">2021-03-18</div>
+                                </li>
+                                <li>
+                                    <div class="tags">Enjoy with Family IPTV</div>
+                                </li>
+                            </ul>
+                            <p class="description">
+                                Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+                            </p>
+                            <a href="moviesPlay.html?98216" class="play-btn">PLAY NOW</a>
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end slide-inner -->
+                </div>
+                <!-- end swiper-slide -->
+
+                <div class="swiper-slide">
+                    <div class="slide-inner" data-background="images/slide02.png">
+                        <div class="container" data-swiper-parallax="200">
+                            <h6 class="tagline">RECOMENDED</h6>
+                            <h2 class="name">6 Underground</h2>
+                            <ul class="features">
+                                <li>
+                                    <div class="rate">
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                    </div>
+                                    <!-- end rate -->
+                                </li>
+                                <li>
+                                    <div class="year">2019-12-13</div>
+                                </li>
+                                <li>
+                                    <div class="tags">Enjoy with Family IPTV</div>
+                                </li>
+                            </ul>
+                            <p class="description">
+                                After faking his death, a tech billionaire recruits a team of international operatives for a bold and bloody mission to take down a brutal dictator.
+                            </p>
+                            <a href="moviesPlay.html?63469" class="play-btn">PLAY NOW</a>
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end slide-inner -->
+                </div>
+                <!-- end swiper-slide -->
+
+
+            </div>
+            <!-- end swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+            <!-- end swiper-pagination -->
+        </div>
+        <!-- end main-slider -->
+    </header>
+    <!-- end slider -->
+    <main>
+
+        <!-- Recent Movies -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h6>Family IPTV</h6>
+                            <h2>Recently Added Movies</h2>
+                        </div>
+                        <!-- end section-title -->
+                    </div>
+
+                    <div class="col-12">
+                        <div class="carousel-tv-shows">
+                            <div id="recentSwiper" class="swiper-wrapper">
+                                
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image0" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name0" class="name"></h3>
+                                            <div class="play-btn"><a id="ref0" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image1" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name1" class="name"></h3>
+                                            <div class="play-btn"><a id="ref1" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image2" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name2" class="name"></h3>
+                                            <div class="play-btn"><a id="ref2" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image3" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name3" class="name"></h3>
+                                            <div class="play-btn"><a id="ref3" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image4" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name4" class="name"></h3>
+                                            <div class="play-btn"><a id="ref4" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="image5" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="name5" class="name"></h3>
+                                            <div class="play-btn"><a id="ref5" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <!-- end swiper-wrapper -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- end carousel-tv-shows -->
+                    </div>
+                    <!-- end col-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end content-section -->
+
+        <!-- Recent Series -->
+        <section class="content-section" data-background="#111111">
+            <div id="recentSwiperSeries" class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title light">
+                            <h6>Family IPTV</h6>
+                            <h2>Recently Added Series</h2>
+                        </div>
+                        <!-- end section-title -->
+                    </div>
+
+                    <div class="col-12">
+                        <div class="carousel-tv-shows">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries0" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries0" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries0" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries1" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries1" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries1" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries2" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries2" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries2" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries3" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries3" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries3" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries4" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries4" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries4" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="category-thumb">
+                                        <figure class="category-image"> <img id="imageSeries5" src="" alt="Image"> </figure>
+                                        <div class="category-content">
+                                            <h3 id="nameSeries5" class="name">Series Name</h3>
+                                            <div class="play-btn"><a id="refSeries5" href="">+</a></div>
+                                            <small class="details">Play Now</small>
+                                        </div>
+                                        <!-- end category-content -->
+                                    </div>
+                                    <!-- end category-thumb -->
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <!-- end swiper-wrapper -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- end carousel-tv-shows -->
+                    </div>
+                    <!-- end col-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end content-section -->
+
+
+        <footer class="footer">
+            <div class="bottom-bar">
+                <div class="container"> <span>© 2021 Family IPTV</span> <span>Developed By <a href="http://sedrait.sa/" target="_blank">Sedra Technology</a></span> </div>
+                <!-- end container -->
+            </div>
+            <!-- end bottom-bar -->
+        </footer>
+        <!-- end footer -->
+    </main>
+
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/fancybox.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        var getData = function(e){
+            var username = sessionStorage.getItem("username");
+            var password = sessionStorage.getItem("password");
+            var server = sessionStorage.getItem("server");
+            var movies;
+            var series;
+            
+            let credintials = {
+                username: username,
+                password: password,
+                action: "get_vod_streams"
+            };
+
+            $.ajax({
+                url: server + "/player_api.php",
+                dataType: 'text',
+                type: "post",
+                contentType: 'application/x-www-form-urlencoded',
+                data: credintials,
+                dataType: 'json',
+                success: function(data) {
+                    movies = data;
+                    
+                    
+                }
+            }).done(function(msg) {
+
+                movies.sort(function(a, b) {
+                    return b["added"] - a["added"];
+                });
+
+                for (i = 0; i < 6; i++) {
+                    var img = document.getElementById('image'+ i);      
+                    var name = document.getElementById('name'+ i);      
+                    var ref = document.getElementById('ref'+ i);
+                    
+                    img.src = movies[i]['stream_icon'];
+                    name.innerHTML = movies[i]['name'];
+                    ref.href = "moviesPlay.html?" + movies[i]['stream_id'];
+                }
+            });
+
+            let credintialsSeries = {
+                username: username,
+                password: password,
+                action: "get_series"
+            };
+
+            $.ajax({
+                url: server + "/player_api.php",
+                dataType: 'text',
+                type: "post",
+                contentType: 'application/x-www-form-urlencoded',
+                data: credintialsSeries,
+                dataType: 'json',
+                success: function(data) {
+                    series = data;
+                    
+                    
+                }
+            }).done(function(msg) {
+
+                series.sort(function(a, b) {
+                    return b["last_modified"] - a["last_modified"];
+                });
+
+                for (i = 0; i < 6; i++) {
+                    var img = document.getElementById('imageSeries'+ i);      
+                    var name = document.getElementById('nameSeries'+ i);      
+                    var ref = document.getElementById('refSeries'+ i);
+                    
+                    img.src = series[i]['cover'];
+                    name.innerHTML = series[i]['name'];
+                    ref.href = "seriesDetails.html?" + series[i]['series_id'];
+                }
+            });
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#410363" />
+    <title>Live TV - Family IPTV</title>
+    <meta name="author" content="Sedra Technology">
+
+
+    <!-- FAVICON FILES -->
+    <link href="ico/favicon.png" rel="shortcut icon">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/lineicons.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="allchannels();">
+    <nav class="mobile-menu">
+        <div class="inner">
+            <div class="mobile-search">
+                <h6>Type channel, movie or series name to find it</h6>
+                <input id="searchMobile" type="search" placeholder="Search Here">
+                <input type="submit" value="SEARCH" onclick="search();">
+            </div>
+            <!-- end mobile-search -->
+            <div class="site-menu">
+                <ul>
+                    <li><a href="main.html">HOME</a></li>
+                    <li><a href="live-tv.html">LIVE TV</a></li>
+                    <li><a href="movies.html">MOVIES</a></li>
+                    <li><a href="series.html">SERIES</a></li>
+                </ul>
+            </div>
+            <!-- end site-menu -->
+        </div>
+        <!-- end inner -->
+    </nav>
+    <!-- end mobile-menu -->
+    <nav class="navbar">
+        <div class="logo"> <a href="main.html"> <img src="images/logo.png" alt="Image"> </a> </div>
+        <!-- end logo -->
+        <div class="site-menu">
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="live-tv.html">LIVE TV</a></li>
+                <li><a href="movies.html">MOVIES</a></li>
+                <li><a href="series.html">SERIES</a></li>
+            </ul>
+        </div>
+        <!-- end site-menu -->
+        <div class="user-menu">
+            <div class="navbar-search"> <i class="lni lni-search-alt"></i> </div>
+            <!-- end navbar-search -->
+        </div>
+        <!-- end user-menu -->
+        <div class="hamburger-menu">
+            <button class="hamburger">
+                <svg width="45" height="45" viewBox="0 0 100 100">
+                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+        <!-- end hamburger-menu -->
+    </nav>
+    <!-- end navbar -->
+    <section class="search-box">
+        <div class="container">
+            <h6>Type channel, movie or series name to find it</h6>
+            <input id="search" type="search" placeholder="Search Here">
+            <input type="submit" value="SEARCH" onclick="search();">
+        </div>
+        <!-- end container -->
+    </section>
+    <header class="page-header">
+        <div class="container">
+            <h1>Live TV</h1>
+        </div>
+    </header>
+    <!-- end page-header -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+
+                <div class="col-12">
+                    <div class="section-title">
+                        <h6>FAMILY IPTV</h6>
+                        <h2 id="liveName"></h2>
+                    </div>
+                    <!-- end section-title -->
+                </div>
+                <div id="channels" class="row">
+                    
+                    <!-- end col-12 -->
+                    
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end content-section -->
+
+
+        <footer class="footer">
+            <div class="bottom-bar">
+                <div class="container"> <span>© 2021 Family IPTV</span> <span>Developed By <a href="http://sedrait.sa/" target="_blank">Sedra Technology</a></span> </div>
+                <!-- end container -->
+            </div>
+            <!-- end bottom-bar -->
+        </footer>
+        <!-- end footer -->
+    </main>
+
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/fancybox.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        var videos = [];
+        var username = sessionStorage.getItem("username")
+        var password = sessionStorage.getItem("password")
+        var server = sessionStorage.getItem("server")
+
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("/");
+        for (var i = 0; i < queries.length; i++)
+        {
+            var categoryid = queries[0] ;
+            var categoryname = queries[1] ;
+        }
+
+        var channelCategory = document.getElementById('liveName');
+        channelCategory.innerHTML = categoryname;
+
+        var allchannels = function(){
+
+            let credintials = {
+                username: username,
+                password: password,
+                action: "get_live_streams"
+            };
+            $.ajax({
+                url: server + "/player_api.php",
+                dataType: 'text',
+                type: "post",
+                contentType: 'application/x-www-form-urlencoded',
+                data: credintials,
+                dataType: 'json',
+                success: function(data) {
+                    for (i = 0; i < data.length; i++) {   
+        
+                        if(data[i]["category_id"]==categoryid){
+                            videos.push(data[i]);
+                            var channelid = data[i]["stream_id"];
+                            var imgsrc = data[i]["stream_icon"];
+                            var append = '<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="video-thumb"><figure class="video-image"><a href="liveVideo.html?'+ channelid +'"><img src="'+ imgsrc +'" alt="Image"></a></figure><div class="video-content">';
+                                append += '<small class="range">EPG Now Playing</small><h3 class="name"><a href="liveVideo.html?'+ channelid +'">'+ data[i]["name"] +'</a></h3></div></div></div>';
+                            $("#channels").last().append(append);
+                        }
+                    }
+                }
+            }).done(function(msg) {
+                
+            });
+        }
+        function search(){
+            var search = document.getElementById('search').value;
+            $("#channels").empty();
+            for (i = 0; i < videos.length; i++) {
+                
+                if(videos[i]["name"].toLowerCase().includes(search.toLowerCase())){
+                    var channelid = videos[i]["stream_id"];
+                    var imgsrc = videos[i]["stream_icon"];
+                    var append = '<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="video-thumb"><figure class="video-image"><a href="liveVideo.html?'+ channelid +'"><img src="'+ imgsrc +'" alt="Image"></a></figure><div class="video-content">';
+                        append += '<small class="range">EPG Now Playing</small><h3 class="name"><a href="liveVideo.html?'+ channelid +'">'+ videos[i]["name"] +'</a></h3></div></div></div>';
+                    $("#channels").last().append(append);
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>
